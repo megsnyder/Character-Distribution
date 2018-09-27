@@ -69,7 +69,7 @@ for i in range(1,len(newlett)):
             number.pop(m)
         m+=1
     n+=1
-    m=0
+    m=n+1
 
 tuples = list(zip(number, newlett))
 print(tuples)
