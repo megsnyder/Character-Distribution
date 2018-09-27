@@ -44,6 +44,7 @@ y=0
 z=0
 n=0
 m=1
+b=0
 allletters = list(string.ascii_lowercase)
 number = []
 newlett = []
@@ -92,6 +93,10 @@ def bsort(seq, cmp):
 
     
 bsort(tuples, compare)
-print(tuples)
+set1=tuples[b]
+for i in tuples:
+  print(set1[0]*set1[1])
+  b+=1
+  set1=tuples[b]
 
 
