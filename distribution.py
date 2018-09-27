@@ -60,14 +60,16 @@ for i in allletters:
             number.append(a)
         x+=1
     y+=1
-    
+print(newlett)
 for i in range(1,len(newlett)):
-    for n in newlett:
+    for j in range(1,len(newlett)):
         if newlett[n]==newlett[m]:
+            print(newlett[m])
             newlett.pop(m)
             number.pop(m)
         m+=1
     n+=1
+    m=0
 
 tuples = list(zip(number, newlett))
 print(tuples)
