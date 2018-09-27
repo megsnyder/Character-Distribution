@@ -36,7 +36,7 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-#import string
+
 text = input("Please enter a string of text (the bigger the better): ")
 lower = (text).lower()
 letters = list(lower)
@@ -45,12 +45,11 @@ z=0
 n=0
 m=1
 c=0
-#allletters = list(string.ascii_lowercase)
+allletters=('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
 number = []
 newlett = []
 ordlett = []
 
-"""
 for i in allletters:
     x=0
     a=0
@@ -62,10 +61,11 @@ for i in allletters:
         x+=1
     y+=1
     
-for i in newlett:
-    if newlett[n]==newlett[m]:
-        newlett.pop(m)
-        number.pop(m)
+for i in range(1,len(newlett)):
+    for n in newlett:
+        if newlett[n]==newlett[m]:
+            newlett.pop(m)
+            number.pop(m)
         m+=1
     n+=1
 
@@ -101,5 +101,5 @@ for i in tuples:
   print(set1[0]*set1[1])
   c+=1
   set1=tuples[c]
-"""
+
 
