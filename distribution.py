@@ -44,7 +44,7 @@ y=0
 z=0
 n=0
 m=1
-b=0
+c=0
 allletters = list(string.ascii_lowercase)
 number = []
 newlett = []
@@ -73,7 +73,7 @@ def compare(a, b):
     """
     compare - generic comparison function for testing two elements.
     """
-    return b[0] < a[0]
+    return b[1] < a[1], b[2] > a[2]
 
 
 def bsort(seq, cmp):
@@ -93,10 +93,10 @@ def bsort(seq, cmp):
 
     
 bsort(tuples, compare)
-set1=tuples[b]
+set1=tuples[c]
 for i in tuples:
   print(set1[0]*set1[1])
-  b+=1
-  set1=tuples[b]
+  c+=1
+  set1=tuples[c]
 
 
