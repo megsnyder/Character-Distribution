@@ -36,7 +36,7 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-import string
+#import string
 text = input("Please enter a string of text (the bigger the better): ")
 lower = (text).lower()
 letters = list(lower)
@@ -45,11 +45,12 @@ z=0
 n=0
 m=1
 c=0
-allletters = list(string.ascii_lowercase)
+#allletters = list(string.ascii_lowercase)
 number = []
 newlett = []
 ordlett = []
 
+"""
 for i in allletters:
     x=0
     a=0
@@ -61,7 +62,6 @@ for i in allletters:
         x+=1
     y+=1
     
-"""
 for i in newlett:
     if newlett[n]==newlett[m]:
         newlett.pop(m)
