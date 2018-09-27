@@ -73,7 +73,7 @@ def compare(a, b):
     """
     compare - generic comparison function for testing two elements.
     """
-    return b[1] < a[1], b[2] > a[2]
+    return b[1] < a[1]
 
 
 def bsort(seq, cmp):
