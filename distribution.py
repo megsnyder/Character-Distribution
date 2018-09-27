@@ -49,6 +49,7 @@ allletters = list(string.ascii_lowercase)
 number = []
 newlett = []
 ordlett = []
+
 for i in allletters:
     x=0
     a=0
@@ -59,6 +60,8 @@ for i in allletters:
             number.append(a)
         x+=1
     y+=1
+    
+"""
 for i in newlett:
     if newlett[n]==newlett[m]:
         newlett.pop(m)
@@ -70,18 +73,17 @@ tuples = list(zip(number, newlett))
 print(tuples)
 
 def compare(a, b):
-    """
-    compare - generic comparison function for testing two elements.
-    """
+    
+    #compare - generic comparison function for testing two elements.
+    
     return b[1] > a[1]
 
 
 def bsort(seq, cmp):
-    """
-    bsort - simple sorting algorithm that uses any comparison function
-    seq - a list to be sorted
-    cmp - a function for comparing two elements of seq
-    """
+    
+    #bsort - simple sorting algorithm that uses any comparison function
+    #seq - a list to be sorted
+    #cmp - a function for comparing two elements of seq
     sorted = False  # assume the seq is not sorted to start with
     while not sorted:
         sorted = True   # assume it's already sorted correctly
@@ -99,5 +101,5 @@ for i in tuples:
   print(set1[0]*set1[1])
   c+=1
   set1=tuples[c]
-
+"""
 
