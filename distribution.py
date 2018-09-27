@@ -1,7 +1,7 @@
 """
 distribution.py
 Author: Meg
-Credit: None
+Credit: Noah
 
 Assignment:
 
@@ -36,4 +36,62 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+import string
 text = input("Please enter a string of text (the bigger the better): ")
+lower = (text).lower()
+letters = list(lower)
+y=0
+z=0
+n=0
+m=1
+allletters = list(string.ascii_lowercase)
+number = []
+newlett = []
+ordlett = []
+for i in allletters:
+    x=0
+    a=0
+    for i in letters:
+        if letters[x]==allletters[y]:
+            a+=1
+            newlett.append(allletters[y])
+            number.append(a)
+        x+=1
+    y+=1
+for i in newlett:
+    if newlett[n]==newlett[m]:
+        newlett.pop(m)
+        number.pop(m)
+        m+=1
+    n+=1
+
+tuples = list(zip(number, newlett))
+print(tuples)
+
+def compare(a, b):
+    """
+    compare - generic comparison function for testing two elements.
+    """
+    return b[0] < a[0]
+
+
+def bsort(seq, cmp):
+    """
+    bsort - simple sorting algorithm that uses any comparison function
+    seq - a list to be sorted
+    cmp - a function for comparing two elements of seq
+    """
+    sorted = False  # assume the seq is not sorted to start with
+    while not sorted:
+        sorted = True   # assume it's already sorted correctly
+        for index, value in enumerate(seq): # for every element in seq
+            if index > 0:                   # past the first..
+                if not cmp(seq[index-1], value):  # if this element is out of order
+                    sorted = False          # then the list is not sorted yet
+                    seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
+
+    
+bsort(tuples, compare)
+print(tuples)
+
+
