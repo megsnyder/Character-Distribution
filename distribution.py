@@ -39,15 +39,15 @@ Notice about this example:
 
 text = input("Please enter a string of text (the bigger the better): ")
 print('The distribution of characters in "'+text+'" is: ')
-lower = (text).lower()
+lower = text.lower()
 letters = list(lower)
 meg = []
 
 allletters=('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
 
 for i in allletters:
-    if text.count(i)!=0:
-        meg.append(i*text.count(i))
+    meg.append(i*letters.count(i))
+print(meg)
 for i in sorted(meg, key = len, reverse = True):
     print(i)
 
