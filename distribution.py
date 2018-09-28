@@ -48,7 +48,7 @@ allletters=('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q',
 for i in allletters:
     if text.count(i)!=0:
         meg.append(i*text.count(i))
-for i in sorted(sorted(meg, key = len, reverse = True)):
+for i in sorted(meg, key = len, reverse = True):
     print(i)
 
 
