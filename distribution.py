@@ -38,7 +38,7 @@ Notice about this example:
 """
 
 text = input("Please enter a string of text (the bigger the better): ")
-print("The distribution of characters in "+text+" is: ")
+print('The distribution of characters in "'+text+'" is: ')
 lower = (text).lower()
 letters = list(lower)
 meg = []
